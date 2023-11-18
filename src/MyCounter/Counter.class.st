@@ -20,6 +20,12 @@ Counter >> count [
 
 { #category : #accessing }
 Counter >> count: x [
-	count:= x
+	^ count:= x
 	
+]
+
+{ #category : #printing }
+Counter >> printOn: aStream [
+	super printOn: aStream.
+	aStream nextPutAll: 'with value: ', count printString.
 ]
